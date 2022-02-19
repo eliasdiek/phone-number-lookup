@@ -69,13 +69,14 @@ def lookUp(number):
     return phoneType
 
 def bulkLookup(filename):
-    copyfile('./input/' + filename, './input/' + filename.split('.')[0] + '-origin' + '.csv')
     allContacts = readCsv('./input/' + filename)
-    counter = 1
 
     if len(allContacts) <= 1:
         print('Nothing to lookup')
     else:
+        copyfile('./input/' + filename, './input/' + filename.split('.')[0] + '-origin' + '.csv')
+        counter = 1
+
         for index, contact in enumerate(allContacts[1:len(allContacts)]):
             number = contact[2]
 
