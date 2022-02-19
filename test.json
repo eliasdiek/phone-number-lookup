@@ -1,0 +1,37 @@
+{
+	"ResponseMetadata": {
+		"RequestId": "9b03f7d4-7c96-4ce3-b422-7a933aa12c79",
+		"HTTPStatusCode": 200,
+		"HTTPHeaders": {
+			"content-type": "application/json",
+			"content-length": "392",
+			"connection": "keep-alive",
+			"date": "Sat, 13 Nov 2021 13:17:09 GMT",
+			"x-amzn-requestid": "9b03f7d4-7c96-4ce3-b422-7a933aa12c79",
+			"access-control-allow-origin": "*",
+			"x-amz-apigw-id": "IvohWG3ooAMF3zw=",
+			"cache-control": "no-store",
+			"x-amzn-trace-id": "Root=1-618fbad5-18194c4b15a52f755ec1946a",
+			"x-cache": "Miss from cloudfront",
+			"via": "1.1 360cdb248de2ad362090d67754f85dbb.cloudfront.net (CloudFront)",
+			"x-amz-cf-pop": "NRT57-P2",
+			"x-amz-cf-id": "nq3icrfxbjvkNwL9kLwJmm8FSzdkEV9-Hs3pmxpddS5RhG1ZvAAIuA=="
+		},
+		"RetryAttempts": 0
+	},
+	"NumberValidateResponse": {
+		"Carrier": "Google (Grand Central) BWI - Bandwidth.com - SVR",
+		"City": "Melbourne",
+		"CleansedPhoneNumberE164": "+13213451680",
+		"CleansedPhoneNumberNational": "3213451680",
+		"Country": "United States",
+		"CountryCodeIso2": "US",
+		"CountryCodeNumeric": "1",
+		"OriginalCountryCodeIso2": "US",
+		"OriginalPhoneNumber": "+13213451680",
+		"PhoneType": "VOIP",
+		"PhoneTypeCode": 2,
+		"Timezone": "America/New_York",
+		"ZipCode": "32901"
+	}
+}
