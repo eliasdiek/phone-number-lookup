@@ -73,26 +73,29 @@ def bulkLookup(filename):
     allContacts = readCsv('./input/' + filename)
     counter = 1
 
-    for index, contact in enumerate(allContacts[1:len(allContacts)]):
-        number = contact[2]
+    if len(allContacts) <= 1:
+        print('Nothing to lookup')
+    else:
+        for index, contact in enumerate(allContacts[1:len(allContacts)]):
+            number = contact[2]
 
-        try:
-            type = lookUp(number).lower()
-            print('[Counter]', counter)
-            print('[Total index]', index + 1)
-            print('[Type]', type)
+            try:
+                type = lookUp(number).lower()
+                print('[Counter]', counter)
+                print('[Total index]', index + 1)
+                print('[Type]', type)
 
-            if type == 'mobile' or type == 'voip':
-                writeCsv('./output/' + filename.split('.')[0] + '-' + ts + '.csv', contact)
-                overWriteCsv('./input/' + filename, allContacts[index + 1:len(allContacts)])
+                if type == 'mobile' or type == 'voip':
+                    writeCsv('./output/' + filename.split('.')[0] + '-' + ts + '.csv', contact)
+                    overWriteCsv('./input/' + filename, allContacts[index + 1:len(allContacts)])
 
-            if counter >= 500:
-                time.sleep(5)
-                counter = 1
+                if counter >= 500:
+                    time.sleep(5)
+                    counter = 1
 
-            counter = counter + 1
-        except:
-            continue
+                counter = counter + 1
+            except:
+                continue
 
 if __name__ == '__main__':
     t = datetime.datetime.utcnow()
