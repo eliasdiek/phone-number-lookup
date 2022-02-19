@@ -64,7 +64,7 @@ def lookUp(number):
         }
     )
     phoneType = response['NumberValidateResponse']['PhoneType']
-    print(response['NumberValidateResponse'])
+    # print(response['NumberValidateResponse'])
     
     return phoneType
 
@@ -101,9 +101,9 @@ if __name__ == '__main__':
     algorithm = 'AWS4-HMAC-SHA256'
     credential_scope = date_stamp + '/' + region + '/' + serviceName + '/' + 'aws4_request'
     signed_headers = 'content-type;host;x-amz-date;x-amz-target'
-    signing_key = getSignatureKey(secretAccessKey, date_stamp, region, serviceName)
-    signature = hmac.new(signing_key, (signed_headers).encode('utf-8'),hashlib.sha256).hexdigest()
-    authorization_header = algorithm + ' ' + 'Credential=' + accessKey + '/' + credential_scope + ', ' +  'SignedHeaders=' + signed_headers + ', ' + 'Signature=' + signature
+    # signing_key = getSignatureKey(secretAccessKey, date_stamp, region, serviceName)
+    # signature = hmac.new(signing_key, (signed_headers).encode('utf-8'),hashlib.sha256).hexdigest()
+    # authorization_header = algorithm + ' ' + 'Credential=' + accessKey + '/' + credential_scope + ', ' +  'SignedHeaders=' + signed_headers + ', ' + 'Signature=' + signature
 
-    # bulkLookup('contacts.csv')
-    lookUp('+16462280241')
+    bulkLookup('contacts.csv')
+    # lookUp('+16462280241')
